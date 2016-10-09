@@ -1,0 +1,10 @@
+  demo.html 为前端页面=====> demosql.php
+  
+  mysql.php 是后台页面！！！！！
+  
+  webedituser.php是点击修改时的页面====》webedituserserver.php
+  addnews.html是点击增添的页面===》addnews.php
+  deletenews.php是点击删除的后台
+  config.php 对数据库连接时参数的定义
+  finctions.php与数据库的连接
+  

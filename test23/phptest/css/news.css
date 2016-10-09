@@ -1,0 +1,33 @@
+h3{
+	text-align: center;
+	font-weight: bold;
+	color:#1abc9c;
+}
+form{
+	background: #1abc9c;
+	width: 500px;
+	height: 300px; 
+	margin:10px auto;
+	padding-top: 20px;
+	text-align: center;
+}
+div{
+	height: 50px;
+}
+div span{
+	width: 80px;
+	height: 30px;
+	display: inline-block;
+	text-align:left; 
+}
+div input{
+	width: 300px;
+	height: 20px;
+}
+#sub{
+	width: 80px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background: #fff;
+}

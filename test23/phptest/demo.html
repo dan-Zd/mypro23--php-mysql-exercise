@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+	<title>百度新闻</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="container">
+	<header>
+	<div class="header">
+		<div class="heal">
+    		<a href=""><img src="img/h1.png" /></a>
+    		<a href=""><img src="img/h2.png" /></a>
+    	</div>
+    	<div class="hear">
+    		<a href=""><img src="img/h3.png" /></a>
+    		<a href=""><img src="img/h4.png" /></a>
+    	</div>
+	</div>
+    </header><!-- /header -->
+    <article>
+    	<nav>
+    	    <ul class="tab-link">
+    			<li data-target=1>推荐</li>
+    			<li data-target=2>百家</li>
+    			<li data-target=3>互联网</li>
+    			<li data-target=4>图片</li>
+    			<li>更多</li>
+	        </ul>
+    	</nav>
+    	<section>
+	    	<div class="section">
+	    	<!-- <img src="img/1.jpg" >
+	    	<p><a href="">新闻说的看法那是肯定发你说的滥罚款了解是多少个大概的</a><span>123456789</span></p> -->
+	    	</div>	
+    	</section>
+    </article><!-- /article -->
+</div>
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+		//e.preventDefault();
+		$('.tab-link li').click(function(){
+            loadNews($(this).attr("data-target"));
+             //console.log($(this).attr("data-target"))
+		});
+		loadNews(1);
+		function loadNews(types){
+            $.get("demosql.php",{
+             	types:types
+            },function(data){
+            	data = eval(data);
+                console.log(data[0]);
+                data = data[0];
+                 $('.section div').remove();
+                for(var i = 0;i<data.length;i++){
+                	$('.section').append('<div class="div1"><img src= "'+data[i].newsimg+'">'+'<div><a href="">'+data[i].newstitle+'</a><span>'+data[i].addtime+'</span></div></div>');
+                   
+			        
+                }
+            });
+		}
+</script>
+</body>
+</html>
